@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Home, About, Contact, Header } from "../Components";
 import { lazy, Suspense } from "react";
-import { Login, Pagina404 } from "../Pages";
+import {  Pagina404 } from "../Pages";
 const Head = lazy(() => import("../Components/Header"));
 export const AppRouter = () => {
   return (
@@ -26,7 +26,7 @@ export const AppRouter = () => {
           <Route path="about" element={<About />} />
           <Route path="contactos" element={<Contact />} />
         </Route>
-        <Route path="Login" element={<Login />} />
+    
         <Route path="*" element={<Pagina404 />} />
       </Routes>
     </>
