@@ -10,11 +10,34 @@ import email from "../assets/icons/email.svg";
 import back from "../assets/icons/back.svg";
 import negativo from '../assets/icons/negativo.png'
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function Footer() {
+  const [showSVG, setShowSVG] = useState(false);
+
+  useEffect(() => {
+    // Aquí defines la lógica para mostrar u ocultar el SVG de reemplazo
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setShowSVG(windowWidth < 1000);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+ 
   return (
     <>
-      <div style={{ height: "250px", overflow: "hidden" }}>
+
+
+
+<div className="olas" style={{ height: "250px", overflow: "hidden" }}>
+      {showSVG ? (
+        <svg className="olas-reemplazo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"  preserveAspectRatio="none"
+        style={{ height: "100%", width: "100%" }}><path fill="#161627" fill-opacity="1" d="M0,160L60,154.7C120,149,240,139,360,144C480,149,600,171,720,160C840,149,960,107,1080,101.3C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+      ) : (
         <svg
           viewBox="0 0 500 150"
           preserveAspectRatio="none"
@@ -25,14 +48,16 @@ function Footer() {
             style={{ stroke: "none", fill: "#161627" }}
           ></path>
         </svg>
-      </div>
+      )}
+    </div>
+
 
       <footer className=" w-100 m-0 p-0">
         <div className="footer__container   ">
           <div className="row d-flex">
-            <div className="col-12 col-md-6 col-xl-4 text-center text-md-start newsletter ">
+            <div className="col-12 col-md-6 col-xl-4 text-center text-md-start newsletter containerc1">
              <img src={negativo} style={{width:"50%"}}></img>
-              <ul className="footer__list my-4 text-center">
+              <ul className="footer__list my-4 text-center ">
                 <li className="footer__list-item me-2">
                   <a href="#" className="footer__list-link">
                     <img
@@ -74,7 +99,7 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-              <div className="eslogan-footeer mt-3">
+              <div className="eslogan-footeer mt-3 centrarslogan">
                 <p>
                   "Llegamos a todos los rincones <br></br> del pais, para
                   sacarte de apuros en cualquier situación"

@@ -1,20 +1,28 @@
 import logo from "../assets/icons/horizontal.jpg";
 import Footer from "./Footer";
 import "../css/style.css";
-import { Link, Outlet } from "react-router-dom";
+import {  Outlet } from "react-router-dom";
+
+import { Link, useLocation } from 'react-router-dom';
 
 
 function Header() {
+  const location = useLocation();
+ 
+
   return (
+
+    
     <>
       <header>
         <nav
-          className="navbar d-flex navbar-expand-lg navbar-light fixed-top pt-2 bg-white"
+          className="navbar d-flex navbar-expand-lg navbar-light fixed-top "
           data-navbar-on-scroll="data-navbar-on-scroll"
         >
-          <div className="container-fluid">
+          <div className="container-fluid new p-1" >
             <Link
-              className=" w-sm-100 w-md-25 logonav position-md-absolute left-md-5"
+              
+              className= " w-sm-100 w-md-25 logonav position-md-absolute left-md-5"
               to="/"
             >
               <img
@@ -32,7 +40,7 @@ function Header() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon text-primary"></span>
             </button>
             <div
               className="collapse navbar-collapse mt-4 mt-lg-0"
@@ -41,7 +49,8 @@ function Header() {
               <ul className="navbar-nav ms-auto pt-2 pt-lg-0">
                 <li className="nav-item">
                   <Link
-                    className="nav-link mx-2 fw-medium active fs-5 text-primary"
+                    className={`efecto nav-link mx-2 fw-medium  fs-5  ${location.pathname === '/' ? ' encender' : ''}`}
+                   
                     aria-current="page"
                     to="/"
                   >
@@ -50,7 +59,7 @@ function Header() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link mx-2 fw-medium fs-5 text-primary"
+                    className= {`efecto nav-link mx-2 fw-medium fs-5   ${location.pathname === '/about' ? 'encender ' : ''}`} 
                     to="about"
                   >
                     Acerca de Nosotros
@@ -59,7 +68,7 @@ function Header() {
                 
                 <li className="nav-item">
                   <Link
-                    className="nav-link fw-medium fs-5 text-primary"
+                    className=  {`efecto nav-link fw-medium fs-5 mx-2      ${location.pathname === '/contactos' ? 'encender ' : ''}`} 
                     to="contactos"
                   >
                     Contactos
@@ -69,7 +78,7 @@ function Header() {
               <div className="ps-lg-5">
                 <Link
                   to={"/login"}
-                  className="btn btn-lg btn-primary rounded-pill order-0 fs-5 me-5"
+                  className="btn  btn-lg mx-2  rounded-pill order-0 fs-5 me-5  BotonInicio principal "
                 >
                   Inicio Sesion
                 </Link>

@@ -275,7 +275,7 @@ footer {
 
 .img_descarga {
     border-radius: 30px;
-    box-shadow: 11px 22px 21px -6px rgba(242, 200, 14, 0.47);
+   
 }
 
 
@@ -465,3 +465,459 @@ background-color: #50ff43;
     background-color: #efab2bd2;
     margin: auto;
 }
+
+/*TRABAJO HERNAN
+
+1 Solucionar el error del about para que las imagenes no se sobrepongan una sobre otra al reducir los pixeles
+575
+*/
+
+@media (max-width:575px){
+    
+    .container1 div{
+        flex-direction: column-reverse;
+    }
+
+
+
+}
+
+/* Arreglo de la play store / AppStore*/
+
+/* @media(max-width: 401px){
+
+    .columna img {
+
+        margin: 5px;
+        width: 80%;
+        justify-content: center;
+
+        
+        
+    }
+    
+} */
+
+
+/*Arreglo de la imagen wuawei and appstore */
+
+.appstore{
+    
+    width: 185px;
+    height: 55px;
+}
+
+
+.wuawei{
+    width: 185px;
+    height: 55px;
+    
+}
+
+@media (min-width:410px),(max-width:1200px) {
+    .centrar{
+        text-align: center;
+    }
+}
+
+
+/* Contactanos*/
+
+.color::placeholder{
+    background-color: #dadddd;
+    color: #242F51;
+  
+    
+}
+.letra{
+    color:white;
+
+}
+
+
+.centrar{
+    
+    justify-content: center;
+}
+
+.form-control{
+    background-color: #dadddd; 
+    
+    width: 100%;
+    height: 100%;
+}
+
+.form-control:hover{
+    background-color:#dadddd ;
+}
+
+.container-form-contacto{
+  background-color:#ececec;
+  color: #161627;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  height: 115%;
+  margin: 0%;
+  border-bottom-left-radius: 90px;
+
+  
+
+  
+}
+
+@media screen and (max-width:1000px) {
+    .container-form-contacto{
+        border-radius: 10px;
+        height: 117%;
+        
+        
+    } 
+
+   
+
+   
+}
+
+.btn-form-contacto{
+    background-color: #9c9c9c;
+}
+.btn-form-contacto:hover{
+    background-color: #9c9c9c;
+}
+
+.colorcontactanos:hover{
+  color:black;
+}
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+.contenedor-padre {
+    position: relative;
+    height: 250px;
+    width: 100%;
+  }
+  
+  .otro-contenedor {
+    position: relative;
+    height: 250px;
+    width: 100%;
+  }
+
+  .imagen1{
+    width: 150px;
+    height: 150px;
+    border-radius:200px;
+    object-fit: cover;
+    object-position: center center; 
+    position: relative;
+    border: solid 10px #9c9c9c;
+    
+  }
+
+  .estilo{
+    background-color: #aeaeae;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+  }
+
+  @media screen and (max-width:1000px) {
+    .estilo{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        background-color:#ececec ;
+    }
+
+    .cambios{
+        display: flex;
+        display: inline;
+        justify-content: center;
+        text-align: center;
+        width:  100%;
+        padding: 100px;
+    }
+
+   .organizarimg{
+    width: 40px;
+    margin-top: -20px;
+   }
+
+    
+    
+  }
+
+  
+
+  
+
+
+
+
+  /* nabvar*/
+
+  .navbar{
+   padding: 0%;
+   margin-top: 0px;
+   
+   
+   
+  }
+
+  .principal{
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+
+ 
+
+
+
+
+  
+
+
+ 
+
+
+  .efecto{
+    font-weight: 500;
+    color:white;
+    border-radius: 50px;
+    padding: 10px ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    
+   
+  }
+
+  .BotonInicio{
+    font-weight: 500;
+    color:black;
+    border-radius: 50px;
+    padding: 10px ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color:white;
+  }
+
+  .BotonInicio:hover, .BotonInicio:focus {
+    background-color:white;
+    color: black;
+  
+  }
+
+
+  /* Efecto de hover */
+.efecto:hover, .efecto:focus {
+    
+    color: white;
+    
+  
+  }
+
+  
+  .new{
+    background:rgb(22,22,39);
+  }
+
+
+  .efecto {
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .efecto::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #e79d27;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .efecto:hover::after {
+    width: 100%;
+  }
+  
+  .efecto.encender::after {
+    width: 100%;
+  }
+
+ 
+
+  /*Animaciones */
+
+
+ 
+
+
+  .playstore .appstore .wuawei .efecto1 .efecto2 .efecto3 .efecto4 .efecto5{
+    transition: transform 0.3s ease-in-out;
+  }
+  
+   .wuawei:hover {
+    transform: scale(1.2);
+  }
+
+  .appstore:hover {
+    transform: scale(1.2);
+  }
+
+  .playstore:hover {
+    transform: scale(1.2);
+  }
+
+  .efecto1 :hover {
+    transform: scale(1.2);
+  }
+
+  .efecto2 :hover {
+    transform: scale(1.2);
+  }
+
+  .efecto3 :hover {
+    transform: scale(1.2);
+  }
+
+  .efecto4 :hover {
+    transform: scale(1.2);
+  }
+
+  .efecto5 :hover {
+    transform: scale(1.2);
+  }
+
+
+
+
+  [data-aos] {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+  }
+
+
+  /* SliderAbout*/
+
+  .carousel img{
+    border-radius: 0%;
+    padding: 0%;
+  }
+
+  .espacios{
+    margin: 0px 0px 0px ;
+  }
+
+  /*Home*/
+
+   .hello {
+    background-image: url("../assets/ilustraciones/hero-bg.png");
+    background-size:100% 100% ; 
+    background-position: center ;
+    background-repeat: no-repeat; 
+   
+    
+  }
+
+
+  /*Footer*/
+
+ 
+
+  .olas {
+    height: 250px;
+    overflow: hidden;
+   
+  }
+  
+  .olas-reemplazo {
+    display: none;
+    height: 250px;
+    width: 100%;
+    position: relative;
+    top: 19%;
+    z-index: -1;
+  }
+  
+  @media (max-width: 767px) {
+    /* .olas {
+      height: 0;
+    }
+  
+    .olas-reemplazo {
+      display: block;
+    } */
+
+    .containerc1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .olas {
+      height: 0;
+    }
+  
+    .olas-reemplazo {
+      display: block;
+    }
+
+}
+
+ 
+  
+  
+  
+  
+  
+
+
+  
+
+ 
+
+  
+
+
+  
+
+
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+  
+  
+  
+  
